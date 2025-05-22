@@ -28,7 +28,7 @@ header {
   color: #fff;
 }
 
-.course-title {
+#course-title {
   display: block;
   font-size: 1.2rem;
   padding: 1rem;

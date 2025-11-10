@@ -39,7 +39,7 @@ nav {
   background-color: #333;
   display: flex;
 
-  a {
+  & a {
     flex: 1 1 100%;
     display: block;
     font-size: 1rem;
@@ -48,11 +48,11 @@ nav {
     color: #fff;
     text-decoration: none;
 
-    &:visited {
+    & :visited {
       color: #fff;
     }
 
-    &:hover {
+    & :hover {
       color: #fff;
       background-color: var(--brown);
       font-weight: 600;
@@ -92,7 +92,7 @@ footer {
   background-color: var(--blue);
   color: #fff;
 
-  p {
+  & p {
     margin: 0;
     text-align: center;
   }
@@ -160,4 +160,22 @@ figcaption {
   font-size: smaller;
   text-align: center;
   font-style: italic;
+}* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+footer {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #eee;
+    text-align: center;
 }

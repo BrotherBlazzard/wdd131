@@ -11,8 +11,36 @@ hambutton.addEventListener('click', () => {
 });
 
 function toggleActive(element) {
-  element.classList.toggle("active");
+  // Remove active class from all anchor tags
+  document.querySelectorAll('a').forEach(link => {
+    link.classList.remove('active');
+  });
+  
+  // Add active class to the clicked element
+  element.classList.add("active");
 }
+
+document.querySelector('#all').addEventListener('click', () => {
+  toggleActive(document.querySelector('#all'));
+  createTempleCard(temples);
+});
+document.querySelector('#old').addEventListener('click', () => {
+  toggleActive(document.querySelector('#old'));
+  createTempleCard(temples.filter(temple => new Date(temple.dedicated) < new Date('1950-01-01')));
+});
+document.querySelector('#new').addEventListener('click', () => {
+  toggleActive(document.querySelector('#new'));
+  createTempleCard(temples.filter(temple => new Date(temple.dedicated) >= new Date('1950-01-01')));
+});
+document.querySelector('#large').addEventListener('click', () => {
+  toggleActive(document.querySelector('#large'));
+  createTempleCard(temples.filter(temple => temple.area >= 50000));
+});
+document.querySelector('#small').addEventListener('click', () => {
+  toggleActive(document.querySelector('#small'));
+  createTempleCard(temples.filter(temple => temple.area < 50000));
+});
+
 
 const temples = [
   {
@@ -74,10 +102,13 @@ const temples = [
 
 ];
 
-createTempleCard();
+createTempleCard(temples);
 
-function createTempleCard() {
-  temples.forEach(temple => {
+function createTempleCard(templos) {
+  // reset display
+  document.querySelector('.res-grid').innerHTML = '';
+
+  templos.forEach(temple => {
     let card = document.createElement("section");
     let name = document.createElement("h3");
     let location = document.createElement("p");
@@ -101,4 +132,4 @@ function createTempleCard() {
 
     document.querySelector(".res-grid").appendChild(card);
   });
-  }
+}

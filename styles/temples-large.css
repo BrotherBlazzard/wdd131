@@ -1,0 +1,10 @@
+@media (min-width: 850px) {
+    .navigation {
+        flex-direction: row;
+        display: flex;
+    }
+
+    #ham-btn {
+        display: none;
+    }
+}

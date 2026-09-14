@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book of Mormon - Top 10</title>
+    <link rel="stylesheet" href="styles/bom.css">
+    <script src="scripts/bom.js" defer></script> 
+</head>
+<body>
+    <h1>📖 Book of Mormon - Top 10</h1>
+    <main>
+        <div class="input-group">
+            <label for="favchap">Enter Book and Chapter: </label>
+            <div class="input-controls">
+                <input type="text" id="favchap" placeholder="e.g., Alma 5" aria-label="Book of Mormon chapter reference">
+                <button type="submit" aria-label="Add chapter to list">Add Chapter</button>
+            </div>
+        </div>
+        <div id="message" aria-live="polite" aria-atomic="true"></div>
+        <div class="list-container">
+            <p class="list-count"><span id="count">0</span>/10</p>
+            <ul id="list"></ul>
+        </div>
+    </main>
+</body>
+</html>

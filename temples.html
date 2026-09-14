@@ -18,65 +18,36 @@
   <script src="scripts/temples.js" defer></script>
 </head>
 
+
 <body>
   <header>
-    <span class="page-title">Temple Album</span>
-    <button type="button" id="ham-btn" aria-label="Menu"></button>
-    <nav>
-      <ul class="navigation">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Old</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Large</a></li>
-        <li><a href="#">Small</a></li>
-      </ul>
+    <h1 class="handler">Temple Album</h1>
+    <a href="#" id="hambutton" aria-label="Open navigation menu"></a>
+    <nav id="navmenu">
+      <a href="#" onclick="toggleActive(this)" ontouchstart="toggleActive(this)">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
     </nav>
   </header>
-  <main>
-    <h1>Home</h1>
-    <div class="figure-grid">
-      <figure>
-        <img src="images/tijuana-mexico-temple.jpg" alt="Tijuana Mexico Temple">
-        <figcaption>Tijuana Mexico</figcaption>
-      </figure>
-      <figure>
-        <img src="images/tijuana-mexico-temple.jpg" alt="">
-        <figcaption>Tijuana Mexico</figcaption>
-      </figure>
-      <figure>
-        <img src="images/tijuana-mexico-temple.jpg" alt="">
-        <figcaption>Tijuana Mexico</figcaption>
-      </figure>
-      <figure>
-        <img src="images/yigo-guam-temple-night.jpg" alt="Yigo Guam Temple - at night">
-        <figcaption>Yigo Guam</figcaption>
-      </figure>
-      <figure>
-        <img src="images/yigo-guam-temple-night.jpg" alt="Yigo Guam Temple - at night">
-        <figcaption>Yigo Guam</figcaption>
 
-      </figure>
-      <figure>
-        <img src="images/yigo-guam-temple-night.jpg" alt="Yigo Guam Temple - at night">
-        <figcaption>Yigo Guam</figcaption>
-      </figure>
-      <figure>
-        <img src="images/tijuana-mexico-temple.jpg" alt="Tijuana Mexico Temple">
-        <figcaption>Tijuana Mexico</figcaption>
-      </figure>
-      <figure>
-        <img src="images/tijuana-mexico-temple.jpg" alt="Tijuana Mexico Temple">
-        <figcaption>Tijuana Mexico</figcaption>
-      </figure>
-      <figure>
-        <img src="images/tijuana-mexico-temple.jpg" alt="Tijuana Mexico Temple">
-        <figcaption>Tijuana Mexico</figcaption>
-      </figure>
+  <main>
+    <h1>Temples of The Church of Jesus Christ of Latter-day Saints</h1>
+    <div class="grid">
+      <section>
+        <h2>Temples</h2>
+        <div id="temple-cards" class="temple-cards">
+          <!-- Temple cards will be dynamically inserted here -->
+        </div>
+      </section>
     </div>
+
   </main>
+
   <footer>
-    <p>&copy; <span id="currentyear"></span> 🌲 Brother Blazzard 🌲 Utah</p>
-    <p id="lastmodified"></p>
+    <p><span id="currentYear"></span> 🌺 Rubia Magdelena Francesco 🌺 Madagascar</p>
+    <p class="smaller" id="lastModified">Last Modification: 01/01/1970 12:00:00</p>
   </footer>
 </body>
 

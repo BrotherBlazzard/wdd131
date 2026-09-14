@@ -1,10 +1,20 @@
-@media (min-width: 850px) {
-    .navigation {
-        flex-direction: row;
-        display: flex;
-    }
+@media screen and (min-width: 880px) {
+  h1.handler {
+    display: block;
+    width: 100%;
+  }
 
-    #ham-btn {
-        display: none;
-    }
+  #hambutton {
+    display: none;
+  }
+
+  #navmenu {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  #navmenu a {
+    display: block;
+    font-size: 1.5rem;
+  }
 }

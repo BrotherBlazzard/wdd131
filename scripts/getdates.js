@@ -1,4 +1,3 @@
-const today = new Date().getFullYear();
-document.querySelector("#currentyear").innerHTML = today;
-
-document.getElementById("lastmodified").innerHTML = `Last Modification: ${document.lastModified}`;
+let d = new Date();
+document.getElementById("currentYear").innerHTML = `&copy;${d.getFullYear()}`;
+document.querySelector('#lastModified').textContent = `Last Modification: ${document.lastModified}`;
